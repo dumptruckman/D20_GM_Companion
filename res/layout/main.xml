@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="#303030"
+        >
+
+    <LinearLayout
+            android:id="@+id/screen_Main"
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            >
+        <Button
+                android:id="@+id/button_Roller"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Roller"
+                />
+        <Button
+                android:id="@+id/button_CharacterManager"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Character Manager"
+                />
+        <Button
+                android:id="@+id/button_SkillManager"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Skill Manager"
+                />
+    </LinearLayout>
+
+    <LinearLayout
+            android:id="@+id/screen_Roller"
+            android:visibility="gone"
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            >
+        <TextView
+                android:id="@+id/text_RollerTitle"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Roller"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"
+                />
+    </LinearLayout>
+    <LinearLayout
+            android:id="@+id/screen_CharacterManager"
+            android:visibility="gone"
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            >
+
+        <TextView
+                android:id="@+id/text_CharacterManagerTitle"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Character Manager"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"
+                />
+        <Button
+                android:id="@+id/button_SelectCharacter"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Select Character"
+                />
+        <LinearLayout
+                android:id="@+id/CharacterSheet"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                >
+            <TableLayout
+                android:id="@+id/CharacterSheet_Basics"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                >
+                <TableRow>
+                    <TextView
+                            android:id="@+id/text_CharacterSheetName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Name:"
+                            android:textColor="#FFFFFF"
+                            />
+                    <EditText
+                            android:id="@+id/edit_CharacterSheetName"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Character Name"
+                            />
+                </TableRow>
+                <TableRow>
+                    <TextView
+                            android:id="@+id/text_CharacterSheetPlayer"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Player:"
+                            android:textColor="#FFFFFF"
+                            />
+                    <EditText
+                            android:id="@+id/edit_CharacterSheetPlayer"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Player Name (can be blank)"
+                            />
+                </TableRow>
+                <TableRow>
+                    <TextView
+                            android:id="@+id/text_CharacterSheetInit"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Initiative:"
+                            android:textColor="#FFFFFF"
+                            />
+                    <EditText
+                            android:id="@+id/edit_CharacterSheetInit"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Character Initiative"
+                            android:numeric="integer"
+                            />
+                </TableRow>
+            </TableLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+            android:id="@+id/screen_SkillManager"
+            android:visibility="gone"
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            >
+        <TextView
+                android:id="@+id/text_SkillManagerTitle"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Skill Manager"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"
+                />
+        <Button
+                android:id="@+id/button_SelectSkill"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Select Character"
+                />
+    </LinearLayout>
+</LinearLayout>
+
