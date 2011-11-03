@@ -47,6 +47,69 @@
                 android:textStyle="bold"
                 android:textColor="#FFFFFF"
                 />
+        <TableLayout
+                    android:id="@+id/table_Roller"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:stretchColumns="0"
+                    >
+            <TableRow>
+                <Button
+                        android:id="@+id/button_rollInit"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Initiative"
+                        />
+                <Button
+                        android:id="@+id/button_resultInit"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Last Results"
+                        />
+            </TableRow>
+            <TableRow>
+                <Button
+                        android:id="@+id/button_rollFort"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Fortitude"
+                        />
+                <Button
+                        android:id="@+id/button_resultFort"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Last Results"
+                        />
+            </TableRow>
+            <TableRow>
+                <Button
+                        android:id="@+id/button_rollRef"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Reflex"
+                        />
+                <Button
+                        android:id="@+id/button_resultRef"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Last Results"
+                        />
+            </TableRow>
+            <TableRow>
+                <Button
+                        android:id="@+id/button_rollWill"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Will"
+                        />
+                <Button
+                        android:id="@+id/button_resultWill"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Last Results"
+                        />
+            </TableRow>
+        </TableLayout>
     </LinearLayout>
     <LinearLayout
             android:id="@+id/screen_CharacterManager"
@@ -80,6 +143,7 @@
                     android:id="@+id/CharacterSheet_Basics"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
+                    android:stretchColumns="1"
                     >
                 <TableRow>
                     <TextView
@@ -127,7 +191,74 @@
                             android:numeric="integer"
                             />
                 </TableRow>
+                <TableRow>
+                    <TextView
+                            android:id="@+id/text_CharacterSheetFort"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Fortitude:"
+                            android:textColor="#FFFFFF"
+                            />
+                    <EditText
+                            android:id="@+id/edit_CharacterSheetFort"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Character Fortitude"
+                            android:numeric="integer"
+                            />
+                </TableRow>
+                <TableRow>
+                    <TextView
+                            android:id="@+id/text_CharacterSheetRef"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Reflex:"
+                            android:textColor="#FFFFFF"
+                            />
+                    <EditText
+                            android:id="@+id/edit_CharacterSheetRef"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Character Reflex"
+                            android:numeric="integer"
+                            />
+                </TableRow>
+                <TableRow>
+                    <TextView
+                            android:id="@+id/text_CharacterSheetWill"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Will:"
+                            android:textColor="#FFFFFF"
+                            />
+                    <EditText
+                            android:id="@+id/edit_CharacterSheetWill"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Character Will"
+                            android:numeric="integer"
+                            />
+                </TableRow>
             </TableLayout>
+            <Button
+                    android:id="@+id/button_CharacterSave"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Save"
+                    />
+            <Button
+                    android:id="@+id/button_CharacterActivate"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Active"
+                    android:textColor="#00CC00"
+                    />
+            <Button
+                    android:id="@+id/button_CharacterDelete"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Delete"
+                    />
         </LinearLayout>
     </LinearLayout>
     <LinearLayout
@@ -153,7 +284,7 @@
                 />
         <LinearLayout
                 android:id="@+id/SkillSheet"
-                android:visibility="visible"
+                android:visibility="gone"
                 android:orientation="vertical"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
@@ -162,6 +293,7 @@
                     android:id="@+id/SkillSheet_Basics"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
+                    android:stretchColumns="1"
                     >
                 <TableRow>
                     <TextView

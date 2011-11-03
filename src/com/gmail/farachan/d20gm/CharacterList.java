@@ -7,11 +7,17 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
+import com.gmail.farachan.d20gm.object.PlayerCharacter;
+import com.gmail.farachan.d20gm.object.Skill;
 
 /**
  * @author dumptruckman
  */
 public class CharacterList extends ListActivity {
+
+    public static PlayerCharacter CREATE = new PlayerCharacter("Create Character...");
+
+    private static CharacterList instance;
 
     /** Called when the activity is first created. */
     @Override
@@ -19,7 +25,9 @@ public class CharacterList extends ListActivity {
     {
         super.onCreate(savedInstanceState);
 
-        setListAdapter(MainScreen.getCharacterList());
+        instance = this;
+
+        setListAdapter(MainScreen.getInstance().getCharacterList());
 
         ListView lv = getListView();
         lv.setTextFilterEnabled(true);
@@ -27,9 +35,19 @@ public class CharacterList extends ListActivity {
         lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             public void onItemClick(AdapterView<?> parent, View view,
                     int position, long id) {
-                // When clicked, show a toast with the TextView text
-                Toast.makeText(getApplicationContext(), ((TextView) view).getText(),
-                        Toast.LENGTH_SHORT).show();
+               /* String characterName = parent.getAdapter().getItem(position).toString();
+                PlayerCharacter character;
+                if (skillName.equals(CREATE)) {
+                    skill = new Skill("", true);
+                } else {
+                    skill = MainScreen.getInstance().getDb().getSkill(skillName);
+                    if (skill == null) {
+                        android.util.Log.e("D20GM", "Skill not in database!");
+                        skill = new Skill("", true);
+                    }
+                }
+                MainScreen.getInstance().showSkill(skill);
+                instance.finish();*/
             }
         });
     }

@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">D20 GM Companion</string>
+
+    <string name="empty_name_warn">You must specify a name!</string>
 </resources>
