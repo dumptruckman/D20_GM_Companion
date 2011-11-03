@@ -77,10 +77,10 @@
                 android:visibility="gone"
                 >
             <TableLayout
-                android:id="@+id/CharacterSheet_Basics"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                >
+                    android:id="@+id/CharacterSheet_Basics"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    >
                 <TableRow>
                     <TextView
                             android:id="@+id/text_CharacterSheetName"
@@ -149,8 +149,56 @@
                 android:id="@+id/button_SelectSkill"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:text="Select Character"
+                android:text="Select Skill"
                 />
+        <LinearLayout
+                android:id="@+id/SkillSheet"
+                android:visibility="visible"
+                android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                >
+            <TableLayout
+                    android:id="@+id/SkillSheet_Basics"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    >
+                <TableRow>
+                    <TextView
+                            android:id="@+id/text_SkillSheetName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Name:"
+                            android:textColor="#FFFFFF"
+                            />
+                    <EditText
+                            android:id="@+id/edit_SkillSheetName"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Skill Name"
+                            />
+                </TableRow>
+            </TableLayout>
+            <Button
+                    android:id="@+id/button_SkillSave"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Save"
+                    />
+            <Button
+                    android:id="@+id/button_SkillActivate"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Active"
+                    android:textColor="#00CC00"
+                    />
+            <Button
+                    android:id="@+id/button_SkillDelete"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Delete"
+                    />
+        </LinearLayout>
     </LinearLayout>
 </LinearLayout>
 

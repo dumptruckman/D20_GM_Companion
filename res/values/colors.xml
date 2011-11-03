@@ -1,0 +1,4 @@
+<resources>
+    <color name="inactive_red">#CC0000</color>
+    <color name="active_green">#00CC00</color>
+</resources>
